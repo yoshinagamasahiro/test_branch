@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const Button = styled.button`
@@ -6,10 +6,14 @@ color: red;
 `;
 
 function AppBodyLeft() {
+    const [count, setcount]= useState(0);
+    const test =()=>{
+        setcount(count+1);
+    }
     return(
         <Collect>
-        <h1>りんごは赤い</h1>
-        <Button>
+        <h1>りんごの価格{count}</h1>
+        <Button onClick={test}>
             テスト
         </Button>
         </Collect>
