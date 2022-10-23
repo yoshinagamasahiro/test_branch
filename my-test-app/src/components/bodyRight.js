@@ -1,17 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 
-const Button = styled.button`
-color: red;
-`;
-
 function AppBodyRight() {
+    const [count, setCount] =  useState(0);
+
+    const test = () => {
+        setCount(count + 1);
+    };
+
     return(
         <Collect>
-        <h1>りんごは青い</h1>
-        <Button>
-            テスト
-        </Button>
+        <h1>現在の値は{count}です。</h1>
+        <button onClick={test}>デブ</button>
         </Collect>
     );
 }
