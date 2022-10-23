@@ -8,6 +8,10 @@ function AppBodyRight() {
         setCount(count + 1);
     };
 
+    if(count>50){
+        alert("やりすぎだよ！！！！");
+    }
+
     return(
         <Collect>
         <h1>現在の値は{count}です。</h1>
