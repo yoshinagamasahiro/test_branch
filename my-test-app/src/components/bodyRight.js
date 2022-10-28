@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import styled from "styled-components";
 
 function AppBodyRight() {
@@ -7,6 +7,10 @@ function AppBodyRight() {
     const test = () => {
         setCount(count + 1);
     };
+
+    useEffect(()=>{
+        alert("頑張ってんね")
+    });
 
     if(count>50){
         alert("やりすぎだよ！！！！");
